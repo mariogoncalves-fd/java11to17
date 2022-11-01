@@ -1,6 +1,17 @@
-package com.flutter.fd.greenback.switchExpressions;
+package com.flutter.fd.greenback.java14;
 
 public class SwitchExpressions {
+
+    public static void main(String[] args) {
+        oldStyleWithoutBreak(Fruit.APPLE);
+        oldStyleWithBreak(Fruit.APPLE);
+        withSwitchExpression(Fruit.APPLE);
+        withReturnValue(Fruit.APPLE);
+        withReturnValueEvenShorter(Fruit.APPLE);
+        withYield(Fruit.APPLE);
+        oldStyleWithYield(Fruit.APPLE);
+    }
+
     private static void oldStyleWithoutBreak(Fruit fruit) {
         switch (fruit) {
             case APPLE, PEAR:

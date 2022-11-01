@@ -1,6 +1,18 @@
-package com.flutter.fd.greenback.textBlocks;
+package com.flutter.fd.greenback.java15;
 
 public class TextBlocks {
+
+    public static void main(String[] args) {
+        oldStyle();
+        emptyBlock();
+        jsonBlock();
+        jsonMovedBracketsBlock();
+        jsonMovedEndQuoteBlock();
+
+        singleLine();
+        keepTrailingSpaces();
+    }
+
     private static void oldStyle() {
         final String text = "{\n" +
                 "  \"name\": \"John Doe\",\n" +
@@ -48,5 +60,21 @@ public class TextBlocks {
               }
                    """;
         System.out.println(text);
+    }
+
+    private static void singleLine() {
+        var singleLineTextBlock = """
+            this is on \
+            a single line""";
+
+        System.out.println(singleLineTextBlock);
+    }
+
+    private static void keepTrailingSpaces() {
+        var trailingWhitespace = """
+    this ends with 8 spaces        \s""";
+
+        System.out.print(trailingWhitespace);
+        System.out.println("...");
     }
 }
